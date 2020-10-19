@@ -8,34 +8,20 @@ from setuptools import setup
 def read(fname):
     return open(os.path.join(os.path.dirname(__file__), fname)).read()
 
+
 setup(
-    name = "qrlib",
-    version = "1.0.0",
-    author = "Miguel Paolino",
-    author_email = "mpaolino@ideal.com.uy",
-    description = ("QR Image and PDF generation library"),
-    license = "Propietary",
-    keywords = "qr library qrlib ideal",
-    url = "http://github.com/mpaolino/qrlib",
-    packages=['qrlib', 'qrlib.lib', 'qrlib.fonts', 
-              'qrlib.tests'],
-    long_description=read('README.rst'),
-    classifiers=[
-        "Development Status :: 1 - Stable",
-        "Topic :: Utilities",
-        ],
-    package_dir={'qrlib': 'qrlib'},
-    package_data={'qrlib': ['static/images/*',
-                            'static/eyes/default/*',
-                            'static/eyes/classic/*',
-                            'static/eyes/heavyround/*',
-                            'static/eyes/circle/*',
-                            'static/styles/circle/*',
-                            'static/styles/classic/*',
-                            'static/styles/default/*',
-                            'static/styles/heavyround/*',
-                            'static/styles/lightround/*',
-                            'static/styles/sieve/*']},
-    install_requires=['Pillow>=1.1.7', 'unittest2>=0.5.1', 'pyzbar>=0.1.8',
-                      'CairoSVG>=0.4.4']
-    )
+    name="qrlib",
+    version="1.0.0",
+    author="Miguel Paolino",
+    author_email="mpaolino@ideal.com.uy",
+    description=("QR Image and PDF generation library"),
+    license="Propietary",
+    keywords="qr library qrlib ideal",
+    url="http://github.com/mpaolino/qrlib",
+    packages=["qrlib", "qrlib.lib", "qrlib.fonts", "qrlib.tests"],
+    long_description=read("README.rst"),
+    classifiers=["Development Status :: 1 - Stable", "Topic :: Utilities",],
+    package_dir={"qrlib": "qrlib"},
+    package_data={"qrlib": ["static/*"]},
+    install_requires=["Pillow>=1.1.7", "unittest2>=0.5.1", "pyzbar>=0.1.8", "CairoSVG>=0.4.4"],
+)
